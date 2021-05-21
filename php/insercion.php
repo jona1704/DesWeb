@@ -1,14 +1,5 @@
 <?php
-    $servidor = "localhost";
-    $bd = "proyecto";
-    $usuario = "root";
-    $password = "login72";
-    // Crear la conexion
-    $conn = new mysqli($servidor, $usuario, $password, $bd);
-    // Verificar la conexion
-    if($conn->connect_error){
-        die("Falló la conexion: " . $conn->connect_error);
-    }
+    include('conexion.php');
 
     /*echo "Conexion Exitosa";*/
     // Recibir parametros
@@ -21,11 +12,14 @@
         $sql = "insert into articulos(nombre, precio) values ('$_GET[nombre]', $_GET[precio])";
         // Validar el Query
         if($conn->query($sql) == true){
-            echo "Inserción Realizada";
+            $mensaje = "acierto";
+            //echo "Inserción Realizada";
         } else{
-            echo "Error en la Insercion";
+            $mensaje = "error";
+            //echo "Error en la Insercion";
         }
     }
 
-    $conn->close();
+    include('cerrar_con.php');
+    header("Location: ../index.php?mensaje=$mensaje");
 ?>

@@ -11,9 +11,30 @@
             color: green;
             font-weight: bold;
         }
+
+        .acierto{
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+        }
+
+        .error{
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <?php
+        if(!empty($_GET["mensaje"])){
+            if($_GET["mensaje"] == "acierto"){
+                echo "<p class='acierto'>Registro Ingresado Correctamente</p>";
+            } else{
+                echo "<p class='error'>Error al Ingresar Datos</p>";
+            }
+        }
+    ?>
     <form method="get" action="../DesWeb/php/insercion.php">
         <label for="nombre">Nombre: </label><br>
         <input type="text" name="nombre" id="nombre"><br>
