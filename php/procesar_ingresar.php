@@ -21,5 +21,5 @@
     }
 
     include('cerrar_con.php');
-    header("Location: ../index.php?mensaje=$mensaje");
+    header("Location: ingresar.php?mensaje=$mensaje");
 ?>
