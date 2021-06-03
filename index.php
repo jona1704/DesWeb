@@ -31,6 +31,15 @@
            margin-top: 10px;
         }
 
+        form .crear_cuenta{
+            margin-left: 10px;
+        }
+
+        form .crear_cuenta h3 a{
+            color: navy;
+            text-decoration: none;
+        }
+
         input[type="text"], input[type="password"]{
             display: block;
             margin-top: 10px;
@@ -72,6 +81,10 @@
         <input type="password" name="passwd" value="<?php if(isset($_COOKIE["login_passwd"])) { echo $_COOKIE["login_passwd"]; } ?>" placeholder="Ingrese Contraseña">
         <input type="checkbox" name="recordar" <?php if(isset($_COOKIE["login_correo"])) { ?> checked <?php } ?>><span>Recuerdame</span>
         <input type="submit" value="Iniciar Sesión">
+        <div class="crear_cuenta">
+            <h3>¿No estas registrado? <a href="php/registrar.php">Crea una cuenta</a></h3>
+        </div>
+
     </form>
 </body>
 </html>

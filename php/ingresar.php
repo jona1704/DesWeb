@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto_Final</title>
+    
     <style>
         *{
             margin: 0;
@@ -131,6 +132,10 @@
 <body>
     <?php
         session_start();
+        $correo = $_SESSION['nombre_correo'];
+        if(!isset($correo)){
+            header("Location: ../index.php");
+        } else{
     ?>
     <header>
         <?php
@@ -160,6 +165,7 @@
         <input type="submit" value="Enviar">
     </form>
     <?php
+    }
         /*$nombre = "Jonathan";
         echo "<p class='lema'>Bienvenidos a Desarrollo Web $nombre</p>";*/
     ?>

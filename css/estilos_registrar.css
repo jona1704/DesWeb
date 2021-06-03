@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, navy, darkgoldenrod) fixed;
+}
+
+form{
+    text-align: center;
+    margin: 50px auto;
+    border: 2px solid black;
+    width: 50%;
+    background-color: darkgoldenrod;
+    border-radius: 15px;
+    box-shadow: 10px 10px navy;
+}
+
+form h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"]{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"]{
+    margin-bottom: 20px;
+}
+
+.radios, .select_estados, .select_municipios, .preferencias{
+    margin-bottom: 10px;
+}
+
+#alerta{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#mensaje{
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 a{
+    color: yellow;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+    form{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    form{
+        width: 90%;
+    }
+}
