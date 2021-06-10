@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: paleturquoise;
+}
+
+header{
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: blanchedalmond;
+    padding: 15px;
+    font-size: 40px;
+    z-index: 1;
+}
+
+main{
+    position: relative;
+    border: 5px solid red;
+}
+
+.contenedor{
+    width: 800px;
+    height: 500px;
+    background-color: salmon;
+    margin: 40px auto;
+    border: 5px solid black;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+}
+
+.cajas{
+    display: inline-block;
+    /*position: static;*/
+    /* Valores para position: static (defecto) | relative | absolute | sticky
+       al activar posicion tambien se activan nuevas propiedades, como son:
+       top, left, right, bottom */
+    /*width: 31.5%;*/
+    width: 100px;
+    height: 100px;
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+/*.relative:nth-child(1){
+    position: relative;
+    left: 0;
+}*/
+
+.contenedor .absolute{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.relative{
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+/* Absoluto 4 */
+main .contenedor .absolute{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Absoluto 1 */
+main .contenedor:nth-child(3) + .absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Absoluto 2 */
+main .contenedor:nth-child(3) + .absolute + .absolute{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Absoluto 3 */
+main .contenedor:nth-child(3) + .absolute + .absolute + .absolute{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
